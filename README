@@ -1,4 +1,4 @@
-package butapp.pck;
+package buttapp2.pkg;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
@@ -8,40 +8,53 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
-
-public class butact extends Activity {
-	
+public class buttappactiv extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        final ImageButton button = (ImageButton) findViewById(R.id.android_button);
+        final ImageButton buttonh = (ImageButton) findViewById(R.id.hank_butt);
         final ImageButton buttonr = (ImageButton) findViewById(R.id.ravi_butt);
         final ImageButton buttonb = (ImageButton) findViewById(R.id.brian_butt);
-        button.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
+        final ImageButton buttonp = (ImageButton) findViewById(R.id.phat_butt);
+        
+        buttonh.setOnClickListener(new OnClickListener() {
+          public void onClick(View v) {
                 // Perform action on clicks
-            	 MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.hankvm);
-            	    mp.start();
+               MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.hankvm);
+                  mp.start();
+          }
+        }); 
         buttonr.setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-        		MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.ravi);
-        		    mp.start();
-        		    
+          public void onClick(View v) {
+            MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.ravi);
+                mp.start();
+          }
+        }); 
         buttonb.setOnClickListener(new OnClickListener() {
-        	public void onClick(View v) {
-        	    MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.bri);
-        	        mp.start();
-         	}
-        }); 
-            
-        	}
-        }); 
-            	    
+          public void onClick(View v) {
+              MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.bri);
+                  mp.start();
+                  
+          }
+        });
+        
+        buttonp.setOnClickListener(new OnClickListener() {
+          public void onClick(View v) {
+              MediaPlayer mp = MediaPlayer.create(getBaseContext(), R.raw.phat);
+                  mp.start();
+        
             }
         });
+    
+        
+        
         
     }
 }
+
+            
+        
+   
